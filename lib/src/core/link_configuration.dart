@@ -21,9 +21,32 @@ class LinkTokenConfiguration implements LinkConfiguration {
     return <String, dynamic>{
       'token': token,
       'noLoadingState': noLoadingState,
+      
     };
   }
 }
+
+
+class LinkTokenConfigurationRedir implements LinkConfiguration {
+  final String token;
+
+  final bool noLoadingState;
+  final String receivedRedirectUri;
+  LinkTokenConfigurationRedir({required this.token, this.noLoadingState = false, this.receivedRedirectUri="" });
+
+  /// Returns a representation of this object as a JSON object.
+  Map<String, dynamic> toJson() {
+    return <String, dynamic>{
+      'token': token,
+      'noLoadingState': noLoadingState,
+      'receivedRedirectUri': receivedRedirectUri
+      
+    };
+  }
+}
+
+
+
 
 /// The LegacyLinkConfiguration class defines properties to support the
 /// old Plaid flow that required a static [publicKey]

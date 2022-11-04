@@ -59,6 +59,7 @@ class PlaidFlutterPlugin {
     final String? userPhoneNumber = arguments['userPhoneNumber'];
     final String? oauthNonce = arguments['oauthNonce'];
     final String? oauthRedirectUri = arguments['oauthRedirectUri'];
+      final String? receivedRedirectUri = arguments['receivedRedirectUri'];
     List<String> countryCodes = arguments['countryCodes'] == null
         ? ['']
         : List<String>.from(arguments['countryCodes']);
@@ -81,6 +82,7 @@ class PlaidFlutterPlugin {
       userLegalName: userLegalName,
       userEmailAddress: userEmailAddress,
       userPhoneNumber: userPhoneNumber,
+      receivedRedirectUri: receivedRedirectUri,
       onEvent: allowInterop((event, metadata) {
         Map<String, dynamic> arguments = {
           'event': event,

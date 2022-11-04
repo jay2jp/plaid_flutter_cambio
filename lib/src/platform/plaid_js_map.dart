@@ -39,6 +39,7 @@ class Configuration {
   external String get userLegalName;
   external String get userEmailAddress;
   external String get userPhoneNumber;
+  external String get receivedRedirectUri;
 
   external factory Configuration({
     String? clientName,
@@ -57,6 +58,7 @@ class Configuration {
     String? userLegalName,
     String? userEmailAddress,
     String? userPhoneNumber,
+    String? receivedRedirectUri,
     void Function(String publicToken, dynamic metadata)? onSuccess,
     void Function()? onLoad,
     void Function(dynamic error, dynamic metadata)? onExit,
